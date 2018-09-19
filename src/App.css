@@ -3,6 +3,9 @@ button {
   padding: none;
   font-size: 1.2em; }
 
+script {
+  display: inline; }
+
 .container {
   display: grid;
   width: 170px;

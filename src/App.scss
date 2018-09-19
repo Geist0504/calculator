@@ -6,6 +6,9 @@ button{
   font-size: 1.2em;
 }
 
+script{
+  display: inline;
+}
 .container{
   display: grid;
   width: $container-width;

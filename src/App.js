@@ -16,7 +16,7 @@ const buttons = [
   { key: '9',
     id: 'nine' },
   { key: '-',
-    id: 'minus' },
+    id: 'subtract' },
   { key: '4',
     id: 'four' },
   { key: '5',
@@ -24,7 +24,7 @@ const buttons = [
   { key: '6',
     id: 'six' },
   { key: '+',
-    id: 'plus' },
+    id: 'add' },
   { key: '1',
     id: 'one' },
   { key: '2',
@@ -40,9 +40,12 @@ const buttons = [
 
 class App extends Component {
   render() {
-    let calc_buttons = buttons.map((obj) => <button className='button' key= {obj.id} id={obj.id}>{obj.key}</button>)
+    let calc_buttons = buttons.map((obj) => (<button className='button' key= {obj.id}
+      id={obj.id}>{obj.key}</button>))
     return (
+      <div>
         <div className='container'>{calc_buttons}</div>
+      </div>
     );
   }
 }
