@@ -1,5 +1,8 @@
-$container-width: 170px;
+$container-width: 260px;
 $background-color: #E6E6FA;
+$red-color: #A62700;
+$operator-color: #A9A9A9;
+$dark-blue: #0a2b58;
 
 html,
 body,
@@ -22,6 +25,10 @@ button:hover{
   border: solid white 1px;
 }
 
+button:focus {
+  outline: none;
+}
+
 .calculator{
   height: 100%;
   width: 100%;
@@ -40,23 +47,28 @@ button:hover{
  /* grid-column-gap: 2px;
   grid-row-gap: 2px;*/
   grid-gap: 1px;
-  grid-auto-rows: 40px;
+  grid-auto-rows: 60px;
   background: black;
-  border: solid black 1px;
+  border: solid black 4px;
 }
 
 #display{
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: right;
+  background-color: black;
+  color: white;
+  border: solid black 4px;
   width: $container-width;
 }
 
 #clear{
   grid-column: span 2;
+  background-color: $red-color;
 }
 #equals{
   grid-row: span 2;
+  background-color:$dark-blue;
 }
 
 #zero{
@@ -64,5 +76,13 @@ button:hover{
 }
 
 .button{
-  background: green;
+  background: #696969;
+  color: white;
+}
+
+#add,
+#subtract,
+#multiply,
+#divide{
+  background-color: $operator-color;
 }

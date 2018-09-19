@@ -39,12 +39,31 @@ const buttons = [
     id: 'decimal' }]
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      display: 'display',
+      calculation: '0',
+      top_display: '',
+      just_calculated: false,
+      calculated: false
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick(event) {
+    let entry = event.target.innerHTML
+    console.log(entry)
+    this.setState({
+      calculation: this.state.calculation + entry
+    })
+  }
   render() {
     let calc_buttons = buttons.map((obj) => (<button className='button' key= {obj.id}
-      id={obj.id}>{obj.key}</button>))
+      id={obj.id} onClick={this.handleClick}>{obj.key}</button>))
     return (
       <div className='calculator'>
-        <div id='display'>Display</div>
+        <div id='display'>{this.state.display}</div>
+        <div id='display'>{this.state.calculation}</div>
         <div className='container'>{calc_buttons}</div>
       </div>
     );
