@@ -43,7 +43,8 @@ class App extends Component {
     let calc_buttons = buttons.map((obj) => (<button className='button' key= {obj.id}
       id={obj.id}>{obj.key}</button>))
     return (
-      <div>
+      <div className='calculator'>
+        <div id='display'>Display</div>
         <div className='container'>{calc_buttons}</div>
       </div>
     );

@@ -1,12 +1,31 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%; }
+
+body {
+  background: #E6E6FA; }
+
 button {
   border: none;
   padding: none;
   font-size: 1.2em; }
 
-script {
-  display: inline; }
+button:hover {
+  border: solid white 1px; }
+
+.calculator {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  justify-content: center; }
 
 .container {
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   width: 170px;
   grid-template-columns: repeat(4, 1fr);
@@ -16,6 +35,12 @@ script {
   grid-auto-rows: 40px;
   background: black;
   border: solid black 1px; }
+
+#display {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 170px; }
 
 #clear {
   grid-column: span 2; }
