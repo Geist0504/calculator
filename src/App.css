@@ -13,7 +13,8 @@ button {
   font-size: 1.2em; }
 
 button:hover {
-  border: solid white 1px; }
+  border: solid white 1px;
+  color: black; }
 
 button:focus {
   outline: none; }
